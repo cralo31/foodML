@@ -17,23 +17,23 @@ This repository implements a predictive framework using gut microbiome data to i
 
 🧬 Methodology Overview
 - Preprocessing
--- Convert paired-end microbiome data (baseline vs. end) to differential abundance matrix
--- Extract species-level Silva features and rename for modeling compatibility
--- Define datasets based on number of food categories (4, 5, or 6 diets)
+    -Convert paired-end microbiome data (baseline vs. end) to differential abundance matrix
+    -Extract species-level Silva features and rename for modeling compatibility
+    -Define datasets based on number of food categories (4, 5, or 6 diets)
 
 -Feature Screening
--- Kruskal-Wallis test per diet to select top discriminative microbes
--- Pool features across diets and pass to classifier
+    -Kruskal-Wallis test per diet to select top discriminative microbes
+    -Pool features across diets and pass to classifier
 
 - Classification
--- Random Forest model with node-size tuning
--- LASSO comparison using multinomial regression
--- Cross-validation (50-fold) for performance robustness
+    -Random Forest model with node-size tuning
+    -LASSO comparison using multinomial regression
+    -Cross-validation (50-fold) for performance robustness
 
 - Validation
--- Use PCA to subtract control-related variance
--- Train model on residual treatment signal
--- Test the model on both treatment and control sets
+    -Use PCA to subtract control-related variance
+    -Train model on residual treatment signal
+    -Test the model on both treatment and control sets
 
 📬 Contact
 For questions or collaborations, please contact:
